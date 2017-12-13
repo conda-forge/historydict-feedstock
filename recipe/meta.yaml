@@ -25,8 +25,8 @@ test:
         - historydict
     requires:
         - pytest
-    test_source:
-        - tests/*
+    source_files:
+        - test*.py
     commands:
         - py.test -vrxs
 
