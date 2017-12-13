@@ -7,7 +7,7 @@ package:
 source:
     url: https://github.com/Nikea/historydict/archive/v{{ version }}.tar.gz
     fn: historydict-v{{ version }}.tar.gz
-    sha256: e5c18cf3f7e12053fcedddbbedf5769d8af89794b54937e8297f96b3fa4a4cf2
+    sha256: 1a3aa662ccc01a92f3ca5f1bf285dffb78738a9d14c470e91c7f076720acd2b4
 
 build:
     noarch: python
