@@ -1,4 +1,4 @@
-{% set version = "1.2.0" %}
+{% set version = "1.2.1" %}
 
 package:
     name: historydict
@@ -7,16 +7,17 @@ package:
 source:
     url: https://github.com/Nikea/historydict/archive/v{{ version }}.tar.gz
     fn: historydict-v{{ version }}.tar.gz
-    sha256: c59d19badded9c2a0b61fd1cd570e94da43446d17f9aa7a4179321f6635ee903
+    sha256: 1a3aa662ccc01a92f3ca5f1bf285dffb78738a9d14c470e91c7f076720acd2b4
 
 build:
-    skip: True  # [py33]
+    noarch: python
     number: 0
     script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
     build:
         - python
+        - setuptools
     run:
         - python
 
@@ -25,8 +26,10 @@ test:
         - historydict
     requires:
         - pytest
+    source_files:
+        - test*.py
     commands:
-        - py.test {{ environ.SRC_DIR }} -vrxs
+        - py.test -vrxs
 
 about:
     home: https://github.com/Nikea/historydict
@@ -38,3 +41,4 @@ extra:
         - ericdill
         - licode
         - tacaswell
+        - CJ-Wright
