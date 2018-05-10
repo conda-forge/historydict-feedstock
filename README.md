@@ -14,12 +14,15 @@ Summary: A persistent dictionary with history backed by sqlite
 Current build status
 ====================
 
-All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/historydict-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/historydict-feedstock)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/historydict-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/historydict-feedstock)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/historydict/badges/version.svg)](https://anaconda.org/conda-forge/historydict)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/historydict/badges/downloads.svg)](https://anaconda.org/conda-forge/historydict)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-historydict-green.svg)](https://anaconda.org/conda-forge/historydict) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/historydict.svg)](https://anaconda.org/conda-forge/historydict) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/historydict.svg)](https://anaconda.org/conda-forge/historydict) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/historydict.svg)](https://anaconda.org/conda-forge/historydict) |
 
 Installing historydict
 ======================
