@@ -33,7 +33,7 @@ test:
 
 about:
   home: https://github.com/Nikea/historydict
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   summary: A persistent dictionary with history backed by sqlite
 
 extra:
