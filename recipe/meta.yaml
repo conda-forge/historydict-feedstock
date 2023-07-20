@@ -1,43 +1,45 @@
-{% set version = "1.2.3" %}
+{% set version = "1.2.4" %}
 
 package:
-    name: historydict
-    version: {{ version }}
+  name: historydict
+  version: {{ version }}
 
 source:
-    url: https://github.com/Nikea/historydict/archive/v{{ version }}.tar.gz
-    fn: historydict-v{{ version }}.tar.gz
-    sha256: be81625a2423faad11314b21619f45815e441fe4b244735ff868fbc15a586c94
-
+  url: https://github.com/Nikea/historydict/archive/v{{ version }}.tar.gz
+  fn: historydict-v{{ version }}.tar.gz
+  sha256: 69b27f978649386a29e989877c2b9b8b02a9c1785531c53a4fa1815f75e386a1
+  patches:
+    - lic.patch
 build:
-    noarch: python
-    number: 0
-    script: python -m pip install --no-deps --ignore-installed .
+  noarch: python
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
-    build:
-        - python
-        - pip
-    run:
-        - python
+  host:
+    - python >=3.6
+    - pip
+  run:
+    - python >=3.6
 
 test:
-    imports:
-        - historydict
-    requires:
-        - pytest
-    source_files:
-        - test*.py
-    commands:
-        - py.test -vrxs
+  imports:
+    - historydict
+  requires:
+    - pytest
+  source_files:
+    - test*.py
+  commands:
+    - py.test -vrxs
 
 about:
-    home: https://github.com/Nikea/historydict
-    license: BSD 3-Clause
-    summary: A persistent dictionary with history backed by sqlite
+  home: https://github.com/Nikea/historydict
+  license: BSD-3-Clause
+  summary: A persistent dictionary with history backed by sqlite
+  license_file: LICENSE
 
 extra:
-    recipe-maintainers:
-        - licode
-        - tacaswell
-        - CJ-Wright
+  recipe-maintainers:
+    - licode
+    - tacaswell
+    - CJ-Wright
