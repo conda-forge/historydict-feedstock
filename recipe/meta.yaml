@@ -8,7 +8,8 @@ source:
   url: https://github.com/Nikea/historydict/archive/v{{ version }}.tar.gz
   fn: historydict-v{{ version }}.tar.gz
   sha256: 69b27f978649386a29e989877c2b9b8b02a9c1785531c53a4fa1815f75e386a1
-
+  patches:
+    - lic.patch
 build:
   noarch: python
   number: 0
@@ -35,6 +36,7 @@ about:
   home: https://github.com/Nikea/historydict
   license: BSD-3-Clause
   summary: A persistent dictionary with history backed by sqlite
+  license_file: LICENSE
 
 extra:
   recipe-maintainers:
