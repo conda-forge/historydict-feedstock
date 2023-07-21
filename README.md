@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/historydict-fee
 
 Home: https://github.com/Nikea/historydict
 
-Package license: BSD 3-Clause
+Package license: BSD-3-Clause
 
 Summary: A persistent dictionary with history backed by sqlite
 
