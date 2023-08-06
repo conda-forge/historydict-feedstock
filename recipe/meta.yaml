@@ -1,4 +1,4 @@
-{% set version = "1.2.4" %}
+{% set version = "1.2.6" %}
 
 package:
   name: historydict
@@ -7,9 +7,8 @@ package:
 source:
   url: https://github.com/Nikea/historydict/archive/v{{ version }}.tar.gz
   fn: historydict-v{{ version }}.tar.gz
-  sha256: 69b27f978649386a29e989877c2b9b8b02a9c1785531c53a4fa1815f75e386a1
-  patches:
-    - lic.patch
+  sha256: 4dcc24b8f314623a9d139e3ac910c42746497d2e4cc58b7f112c82099efbc2a7
+
 build:
   noarch: python
   number: 0
@@ -43,3 +42,4 @@ extra:
     - licode
     - tacaswell
     - CJ-Wright
+    - mrakitin
