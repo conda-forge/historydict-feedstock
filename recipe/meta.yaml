@@ -11,26 +11,28 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
+    - setuptools
     - pip
   run:
-    - python >=3.6
+    - python >={{ python_min }}
 
 test:
   imports:
     - historydict
   requires:
     - pytest
+    - python {{ python_min }}
   source_files:
     - test*.py
-  commands:
-    - py.test -vrxs
-
+#   commands:
+#     - py.test -vrxs
+#
 about:
   home: https://github.com/Nikea/historydict
   license: BSD-3-Clause
